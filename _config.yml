@@ -29,6 +29,8 @@ twitter_username: martinbeentjes
 github_username:  martinbeentjes
 disqus:
   shortname: beentjes
+google-analytics: UA-66642146-1
+
 # Build settings
 theme: minima
 plugins:
