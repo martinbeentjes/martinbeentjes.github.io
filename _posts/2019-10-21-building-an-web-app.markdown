@@ -2,9 +2,9 @@
 layout: post
 title: "Building a web app - part 0"
 date: 2019-10-21 13:00:00
-categories: [programming, ers]
+categories: [programming]
 tags: [frontend, kotlin, spring boot, fullstack]
-published: true
+published: false
 ---
 
 Welcome to the first part in a series on build a fullstack web application. This series is going to cover the process of building an event registration system, from the database to the frontend and the whole process of doing so!
