@@ -2,7 +2,7 @@
 layout: post
 title: "Building a web app - part 0"
 date: 2019-10-21 13:00:00
-categories: programming,ers
+categories: programming, ers
 published: true
 ---
 
