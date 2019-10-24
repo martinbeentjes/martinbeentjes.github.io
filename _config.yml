@@ -25,17 +25,12 @@ description: >- # this means to ignore newlines until "baseurl:"
   Spring Boot, microservices, and personal things
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://beentjes.me/" # the base hostname & protocol for your site, e.g. http://example.com
-# twitter_username: martinbeentjes
-# github_username:  martinbeentjes
+twitter_username: martinbeentjes
+github_username:  martinbeentjes
+linkedin_username: martinbeentjes
 disqus:
   shortname: beentjes
-
-minima:
-  social_links:
-    twitter: martinbeentjes
-    github: martinbeentjes
-    linkedin: martinbeentjes
-    
+ 
 google_analytics: UA-66642146-1
 
 # Build settings
