@@ -4,7 +4,7 @@ title: "Going from Spring to Ktor - part 0"
 date: 2019-10-21 13:00:00
 categories: [programming]
 tags: [kotlin, spring boot, ktor, backend]
-published: false
+published: true
 ---
 
 ## Introduction
