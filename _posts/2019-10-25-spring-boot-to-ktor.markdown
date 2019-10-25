@@ -12,7 +12,7 @@ Spring Boot is the standard framework for backend services. Every backend servic
 
 > Ktor is a framework for building asynchronous servers and clients in connected systems using the powerful [Kotlin programming language](https://kotlinlang.org). 
 >
-> &mdash; [Kotlin programming language](<cite>https://ktor.io/</cite>)
+> &mdash; <cite>[Kotlin programming language](https://ktor.io/)</cite>
 
 
 ## Research Questions
