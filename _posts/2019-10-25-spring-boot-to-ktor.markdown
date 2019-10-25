@@ -20,9 +20,9 @@ In this series we are going to explore Ktor and compare it to a simple Spring Bo
 
  - What is the performance of a Ktor application versus a Spring Boot application? 
  - What are the resource characteristics of both? 
- - - What is the throughput?
- - - What is the CPU usage?
- - - What is the memory usage?
+   - What is the throughput?
+   - What is the CPU usage?
+   - What is the memory usage?
  - What is the complexity when services grow?
  - What are the coding conventions compared to each other?
  - What is the stability of the Ktor framework compared to Spring Boot?
