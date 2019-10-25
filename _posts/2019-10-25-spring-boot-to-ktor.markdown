@@ -7,25 +7,16 @@ tags: [kotlin, spring boot, ktor, backend]
 published: true
 ---
 
-## Introduction
-Spring Boot is the standard framework for backend services. Ktor is a web framework written in Kotlin. In this series we will explore trying out Ktor instead of Spring. 
+Spring Boot is the standard framework for backend services. Every backend service I write is in Kotlin with Spring Boot. I prefer Kotlin over Java because Kotlin is less verbose and much more concise. From the Kotlin community, more frameworks are being built. Ktor is one of them. What is Ktor?
 
-Every backend service I write is in Kotlin with Spring Boot. I prefer Kotlin over Java because Kotlin is less verbose and much more concise. 
+> Ktor is a framework for building asynchronous servers and clients in connected systems using the powerful [Kotlin programming language](https://kotlinlang.org). 
+>
+> &mdash; <cite>https://ktor.io/</cite>
 
-## Goals of this series
 
-Time is not invested randomly. We invest time in tbis project for several reasons. The following goals are set for this series to be answered. 
-
-### Developer experience
-
-As a developer writing Spring applications is really straight forward  and easy. How is that experience with Ktor? Is it as intuitive as  Spring Boot?
-
-### Performance measurements
+In this series we are going to explore Ktor and compare it to a simple Spring Boot service. In this adventure, there are many questions to be answered:
 
  - What is the performance of a Ktor application versus a Spring Boot application? 
  - What are the resource characteristics of both? 
  - What is the throughput of a single instance? 
-
-### Gaining knowledge
-
-Besides that we will also gain knowledge  about doing such experiments. And sharing is caring, thus we share  the knowledge we have gathered in the process.
+ - What is the complexity when services grow?
