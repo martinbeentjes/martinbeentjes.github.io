@@ -26,3 +26,6 @@ In this series we are going to explore Ktor and compare it to a simple Spring Bo
  - What is the complexity when services grow?
  - What are the coding conventions compared to each other?
  - What is the stability of the Ktor framework compared to Spring Boot?
+
+## Follow the series
+Come along this adventure of exploring Ktor and seeing how it works and performs. I will post tweets regarding this on my twitter handle [@martinbeentjes](https://twitter.com/martinbeentjes). I also will be sharing projects on GitHub when finished.
