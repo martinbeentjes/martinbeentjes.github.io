@@ -1,22 +1,27 @@
 ---
 layout: post
-title: "Building a web app - part 0"
+title: "Going from Spring to Ktor - part 0"
 date: 2019-10-21 13:00:00
 categories: [programming]
-tags: [frontend, kotlin, spring boot, fullstack]
+tags: [kotlin, spring boot, ktor, backend]
 published: false
 ---
 
-Welcome to the first part in a series on build a fullstack web application. This series is going to cover the process of building an event registration system, from the database to the frontend and the whole process of doing so!
+## Introduction
+Spring Boot is the standard framework to go for when building backend services compiled to the JVM. Ktor is another framework fully written in Kotlin. In this series we will explore trying out Ktor instead of Spring.
 
-I am a backend engineer from origin. I want to grow towards being fullstack engineer. Besides the fullstack, I also want to understand how to design user interfaces. 
+## Why Ktor?
+I am mostly just writing in Kotlin when it comes to backend services. I prefer it over Java because it is less verbose and much more concise. 
 
-In this series we will cover several subjects:
+## Goals of this series
 
- * Learn the process of building a production ready software application from scratch
- * How to build a Spring Boot backend API with a frontend
- * Implement a frontend framework as React or Vue
- * Learn to create a decent user interface
- * Build beautiful APIs 
- * How to deploy our application
+### Developer experience
+As a developer writing Spring applications is really straight forward and easy. How is that experience with Ktor? Is it as intuitive as Spring Boot?
 
+### Performance
+What is the performance of a Ktor application versus a Spring Boot application? What are the resource characteristics of both?
+
+For this we are going to deploy it into a fat jar in a Docker image (with the same specs) and see how both are performing.
+
+### Gaining knowledge
+Besides all the fun technological stuff we will also gain knowledge about doing such experiments. And sharing is caring, therefore we share the knowledge we have gathered in the process.
