@@ -3,7 +3,7 @@ layout: post
 title: Reducing diskspace for a MongoDB instance
 date: 2019-10-31
 tags: [devops, mongodb, database]
-published: false
+published: true
 ---
 
 ## compact
