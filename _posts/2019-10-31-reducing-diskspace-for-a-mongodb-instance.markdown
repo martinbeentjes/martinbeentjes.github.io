@@ -6,9 +6,11 @@ tags: [devops, mongodb, database]
 published: true
 ---
 
+MongoDB is a datastore which is often used when storing big blobs of data. It has the characteristic to not release diskspace when a lot of data is removed. When you have 5GB of data stored and try to remove 2GB of that, MongoDB will not release that 2GB of diskspace. The disk space will stay at 5GB. Either `compact` or `repairDatabase` can be used.
+
 ## compact
 
-MongoDB is a datastore which is often used when storing big blobs of data. It has the characteristic to not release diskspace when a lot of data is removed. When you have 5GB of data stored and try to remove 2GB of that, MongoDB will not release that 2GB of diskspace. The disk space will stay at 5GB. To actually reduce the disk space of a MongoDB database the `compact` command can be executed. Running the `compact` command places a block on all other operations at the database level. The `compact` command works at a collection level. To release diskspace previously used for `myMassiveData` collection, the following command can be executed:
+To actually reduce the disk space of a MongoDB database the `compact` command can be executed. Running the `compact` command places a block on all other operations at the database level. The `compact` command works at a collection level. To release diskspace previously used for `myMassiveData` collection, the following command can be executed:
 
 ```js
 db.runCommand({compact:'myMassiveData'})
