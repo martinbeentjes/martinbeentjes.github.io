@@ -21,8 +21,7 @@
 title: Martin Beentjes
 email: martin@beentjes.me
 description: >- # this means to ignore newlines until "baseurl:"
-  Martin is a enthustiac software engineer writing about Kotlin, 
-  Spring Boot, microservices, and personal things
+  A blog about software engineering, Kotlin, Spring Boot, Web Development, DevOps, Scripting and many more.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://beentjes.me/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: martinbeentjes
