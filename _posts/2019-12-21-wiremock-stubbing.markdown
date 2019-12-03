@@ -6,3 +6,7 @@ categories: [programming]
 tags: [wiremock, stubbing, performance testing]
 published: false
 ---
+
+## Why?
+
+
