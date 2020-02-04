@@ -6,3 +6,4 @@ In November of 2019 I got in touch with a colleague who is the Lead on SRE withi
 
 Joining our Site Reliability Team will help me learn to understand the operational part of building delivering software like Albert Heijn does. Together with the team we aim to improve the process of releasing new features to our customers.
 
+
