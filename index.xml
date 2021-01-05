@@ -5,6 +5,26 @@
     <link>https://beentjes.me/</link>
     <description>Recent content on Martin Beentjes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://beentjes.me/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Mon, 04 Jan 2021 10:00:00 +0100</lastBuildDate><atom:link href="https://beentjes.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome to my blog</title>
+      <link>https://beentjes.me/post/welcome/</link>
+      <pubDate>Mon, 04 Jan 2021 10:00:00 +0100</pubDate>
+      
+      <guid>https://beentjes.me/post/welcome/</guid>
+      <description>This is my first post</description>
+    </item>
+    
+    <item>
+      <title>Who is Martin?</title>
+      <link>https://beentjes.me/about/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://beentjes.me/about/</guid>
+      <description>Hi there, I am Martin. I am a 25 year old software engineer living in The Netherlands.
+My main interest are in languages like Go, Rust and Kotlin. I work for Albert Heijn, one of the biggest retailers in The Netherlands.</description>
+    </item>
+    
   </channel>
 </rss>
