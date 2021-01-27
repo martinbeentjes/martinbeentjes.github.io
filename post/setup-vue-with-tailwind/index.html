@@ -184,8 +184,7 @@ First of all, we want to initialize the VueJS project. Vue offers a CLI tool to 
   <span class="nx">plugins</span><span class="o">:</span> <span class="p">[],</span>
 <span class="p">};</span>
 </code></pre></div><p>An important and useful line in the tailwind configuraton is that we would like to purge many of the classes of Tailwind. If we only use one class, we only want to bundle the css classes that are actually used in our application to reduce the final bundle size.</p>
-<p>And now we also need to import Tailwind in our app. What we can do is to add a CSS asset in <code>./assets/css/styles.scss</code>:</p>
-<p>Then in your App.vue class, add the following in the <code>&lt;style&gt;</code> section:</p>
+<p>Then in your App.vue class, add the following in the <code>&lt;style&gt;</code> section to allow usage of tailwind in the Vue application:</p>
 <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;template&gt;
 ...
 &lt;/template&gt;
