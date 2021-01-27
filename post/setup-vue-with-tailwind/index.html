@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme=""><head>
-    <title>  </title>
+    <title>  | Setup Vue With Tailwind </title>
 
     
     <meta charset="utf-8"><meta name="generator" content="Hugo 0.80.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -37,10 +37,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="https://beentjes.me/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://beentjes.me/favicon-16x16.png">
 
-    <link rel="canonical" href="https://beentjes.me/">
+    <link rel="canonical" href="https://beentjes.me/post/setup-vue-with-tailwind/">
 
     
-    <link rel="alternate" type="application/rss+xml" href="https://beentjes.me/index.xml" title="Martin Beentjes" />
     
     
     
@@ -59,8 +58,9 @@
                 crossorigin="anonymous"></script>
     
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Setup Vue With Tailwind"/>
+<meta name="twitter:description" content="You are walking in the beautifiul winter sun and suddenly you come up with an idea for a web application you want to build. Where to start? I use VueJS with Tailwind to quickly setup a draft project. This post guides you through this process. I expect you to have node installed and npm as well.
+First of all, we want to initialize the VueJS project. Vue offers a CLI tool to do this."/>
 
 </head>
 <body><div class="sidebar animated fadeInDown ">
@@ -115,7 +115,7 @@
         
         
             
-            <li><a class="current"
+            <li><a 
                    href="/"
                         
                    title="">Home</a></li>
@@ -145,59 +145,70 @@
 
     <div class="autopagerize_page_element">
         <div class="content">
-
     <div class="post  animated fadeInDown ">
-        
-        <h1 id="welcome">Welcome</h1>
-
-    </div>
-
-    
-    
-
-        <div class="post  animated fadeInDown ">
+        <div class="post-content">
             <div class="post-title">
-                <h3><a href="/post/setup-vue-with-tailwind/">Setup Vue With Tailwind</a>
-                </h3>
-            </div>
-            <div class="post-content">
-                <div class="p_part"><p>You are walking in the beautifiul winter sun and suddenly you come up with an idea for a web application you want to build. Where to start? I use VueJS with Tailwind to quickly setup a draft project. This post guides you through this process. I expect you to have node installed and npm as well.
-First of all, we want to initialize the VueJS project. Vue offers a CLI tool to do this.</p></div>
-            </div>
-            <div class="post-footer">
-                <div class="meta">
-                    <div class="info"><em class="fas fa-calendar-day"></em><span
-                                class="date">Wed, Jan 27, 2021</span>
-                        
+                <h3>Setup Vue With Tailwind</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date">Wed, Jan 27, 2021</span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">2-minute read</span>
                     </div>
-                </div>
+                
+            </div>
+
+            <p>You are walking in the beautifiul winter sun and suddenly you come up with an idea for a web application you want to build. Where to start? I use VueJS with Tailwind to quickly setup a draft project. This post guides you through this process. I expect you to have <code>node</code> installed and <code>npm</code> as well.</p>
+<p>First of all, we want to initialize the VueJS project. Vue offers a CLI tool to do this. We install this using <code>npm install -g @vue/cli</code>. We can then scaffold a new vue project using <code>vue create vue-taiwind-starter</code>.</p>
+<p>Now we have a default Vue project, yay! Next up, let&rsquo;s install TailwindCSS. To install we will install three components via <code>npm install tailwindcss postcss autoprefixer</code>. However, at the time of writing TailwindCSS is not using PostCSS 8 yet, however there is a small extended <code>npm i</code> we can run to enable this by using a specific channel:</p>
+<p><code>npm install tailwindcss@npm:@tailwindcss/postcss7-compat postcss@\^7 autoprefixer@\^9</code></p>
+<p>To configure PostCSS and TailwindCSS we must configure both, add the following files to the root of your project.</p>
+<p><code>postcss.config.js</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="err">module.exports</span> <span class="err">=</span> <span class="p">{</span>
+  <span class="err">plugins:</span> <span class="err">{</span>
+    <span class="err">tailwindcss:</span> <span class="err">{</span><span class="p">}</span><span class="err">,</span>
+    <span class="err">autoprefixer:</span> <span class="p">{}</span><span class="err">,</span>
+  <span class="err">},</span>
+<span class="err">};</span>
+</code></pre></div><p><code>tailwind.config.js</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="err">module.exports</span> <span class="err">=</span> <span class="p">{</span>
+  <span class="err">purge:</span> <span class="err">[&#39;./src/**/*.html&#39;,</span> <span class="err">&#39;./src/**/*.html&#39;],</span>
+  <span class="err">darkMode:</span> <span class="err">false,</span> <span class="err">//</span> <span class="err">or</span> <span class="err">&#39;media&#39;</span> <span class="err">or</span> <span class="err">&#39;class&#39;</span>
+  <span class="err">theme:</span> <span class="err">{</span>
+    <span class="err">extend:</span> <span class="err">{</span><span class="p">}</span><span class="err">,</span>
+  <span class="err">},</span>
+  <span class="err">variants:</span> <span class="p">{</span>
+    <span class="err">extend:</span> <span class="err">{</span><span class="p">}</span><span class="err">,</span>
+  <span class="err">},</span>
+  <span class="err">plugins:</span> <span class="p">[]</span><span class="err">,</span>
+<span class="err">};</span>
+</code></pre></div><p>An important and useful line in the tailwind configuraton is that we would like to purge many of the classes of Tailwind. If we only use one class, we only want to bundle the css classes that are actually used in our application to reduce the final bundle size.</p>
+<p>And now we also need to import Tailwind in our app. What we can do is to add a CSS asset in <code>./assets/css/styles.scss</code>:</p>
+<p>Then in your App.vue class, add the following in the <code>&lt;style&gt;</code> section:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;template&gt;
+...
+&lt;/template&gt;
+
+&lt;style&gt;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+...
+&lt;/style&gt;
+</code></pre></div></div>
+        <div class="post-footer">
+            <div class="info">
+                
+                
             </div>
         </div>
-    
 
-        <div class="post  animated fadeInDown ">
-            <div class="post-title">
-                <h3><a href="/post/welcome/">Welcome to my blog</a>
-                </h3>
-            </div>
-            <div class="post-content">
-                <div class="p_part"><p>This is my first post</p></div>
-            </div>
-            <div class="post-footer">
-                <div class="meta">
-                    <div class="info"><em class="fas fa-calendar-day"></em><span
-                                class="date">Mon, Jan 4, 2021</span>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-    <div class="pagination">
         
-
-
+            
+        
     </div>
+
 
         </div>
     </div>

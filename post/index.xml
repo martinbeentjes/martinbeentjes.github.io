@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Martin Beentjes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Jan 2021 10:00:00 +0100</lastBuildDate><atom:link href="https://beentjes.me/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Jan 2021 14:07:39 +0100</lastBuildDate><atom:link href="https://beentjes.me/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup Vue With Tailwind</title>
+      <link>https://beentjes.me/post/setup-vue-with-tailwind/</link>
+      <pubDate>Wed, 27 Jan 2021 14:07:39 +0100</pubDate>
+      
+      <guid>https://beentjes.me/post/setup-vue-with-tailwind/</guid>
+      <description>You are walking in the beautifiul winter sun and suddenly you come up with an idea for a web application you want to build. Where to start? I use VueJS with Tailwind to quickly setup a draft project. This post guides you through this process. I expect you to have node installed and npm as well.
+First of all, we want to initialize the VueJS project. Vue offers a CLI tool to do this.</description>
+    </item>
+    
     <item>
       <title>Welcome to my blog</title>
       <link>https://beentjes.me/post/welcome/</link>
