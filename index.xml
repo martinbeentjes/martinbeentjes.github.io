@@ -18,15 +18,6 @@ First of all, we want to initialize the VueJS project. Vue offers a CLI tool to 
     </item>
     
     <item>
-      <title>Welcome to my blog</title>
-      <link>https://beentjes.me/post/welcome/</link>
-      <pubDate>Mon, 04 Jan 2021 10:00:00 +0100</pubDate>
-      
-      <guid>https://beentjes.me/post/welcome/</guid>
-      <description>This is my first post</description>
-    </item>
-    
-    <item>
       <title>Who is Martin?</title>
       <link>https://beentjes.me/about/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
