@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Martin Beentjes</title>
+    <link>https://beentjes.me/</link>
+    <description>Recent content on Martin Beentjes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 27 Jan 2021 14:07:39 +0100</lastBuildDate><atom:link href="https://beentjes.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup Vue With Tailwind</title>
+      <link>https://beentjes.me/post/setup-vue-with-tailwind/</link>
+      <pubDate>Wed, 27 Jan 2021 14:07:39 +0100</pubDate>
+      
+      <guid>https://beentjes.me/post/setup-vue-with-tailwind/</guid>
+      <description>You are walking in the beautifiul winter sun and suddenly you come up with an idea for a web application you want to build. Where to start? I use VueJS with Tailwind to quickly setup a draft project. This post guides you through this process. I expect you to have node installed and npm as well.
+First of all, we want to initialize the VueJS project. Vue offers a CLI tool to do this.</description>
+    </item>
+    
+    <item>
+      <title>Who is Martin?</title>
+      <link>https://beentjes.me/about/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://beentjes.me/about/</guid>
+      <description>Hi there, I am Martin. I am a 25 year old software engineer living in The Netherlands.
+My main interest are in languages like Go, Rust and Kotlin. I work for Albert Heijn, one of the biggest retailers in The Netherlands.</description>
+    </item>
+    
+  </channel>
+</rss>

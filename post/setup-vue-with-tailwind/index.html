@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Setup Vue With Tailwind - Martin Beentjes</title>
+    
+    <meta name="description" content="You are walking in the beautifiul winter sun and suddenly you come up with an idea for a web application you want to build. Where to start? I use VueJS with Tailwind to quickly setup a draft project. This post guides you through this process. I expect you to have node installed and npm as well.
+First of all, we want to initialize the VueJS project. Vue offers a CLI tool to do this.">
+    <meta name="author" content="">
+    
+    <link href="https://beentjes.me/an-old-hope.min.css" rel="stylesheet">
+    <link href="https://beentjes.me/style.css" rel="stylesheet">
+    <link href="https://beentjes.me/custom.css" rel="stylesheet">
+    
+    <link rel="apple-touch-icon" href="https://beentjes.me/apple-touch-icon.png">
+    <link rel="icon" href="https://beentjes.me/favicon.ico">
+    <meta name="generator" content="Hugo 0.82.1" />
+    
+    
+    
+    <script>
+      function setTheme() {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.body.classList.add('dark');
+          return;
+        }
+
+        const time = new Date();
+        const prev = localStorage.getItem('date');
+        const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+        const now = time.getTime();
+        let sunrise;
+        let sunset;
+
+        function setBodyClass() {
+          if (now > sunrise && now < sunset) return;
+          document.body.classList.add('dark');
+        }
+
+        if (date !== prev) {
+          fetch('https://api.ipgeolocation.io/astronomy?apiKey=5ed37d85103e4defa5df4c5298ed5215')
+            .then((res) => res.json())
+            .then((data) => {
+              sunrise = data.sunrise.split(':').map(Number);
+              sunset = data.sunset.split(':').map(Number);
+            })
+            .catch(() => {
+              sunrise = [7, 0];
+              sunset = [19, 0];
+            })
+            .finally(() => {
+              sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+              sunset = time.setHours(sunset[0], sunset[1], 0);
+              setBodyClass();
+              localStorage.setItem('sunrise', sunrise);
+              localStorage.setItem('sunset', sunset);
+            });
+          localStorage.setItem('date', date);
+        } else {
+          sunrise = Number(localStorage.getItem('sunrise'));
+          sunset = Number(localStorage.getItem('sunset'));
+          setBodyClass();
+        }
+      }
+    </script>
+  </head>
+  <body class="single">
+    <script>
+      setTheme();
+    </script>
+    <header class="header">
+      <nav class="nav">
+        <p class="logo"><a href="https://beentjes.me/">Martin Beentjes</a></p>
+        <ul class="menu">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/post/">Posts</a>
+          </li>
+          <li>
+            <a href="/about/">About</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Setup Vue With Tailwind</h1>
+    <div class="post-meta">January 27, 2021</div>
+  </header>
+  <div class="post-content"><p>You are walking in the beautifiul winter sun and suddenly you come up with an idea for a web application you want to build. Where to start? I use VueJS with Tailwind to quickly setup a draft project. This post guides you through this process. I expect you to have <code>node</code> installed and <code>npm</code> as well.</p>
+<p>First of all, we want to initialize the VueJS project. Vue offers a CLI tool to do this. We install this using <code>npm install -g @vue/cli</code>. We can then scaffold a new vue project using <code>vue create vue-taiwind-starter</code>.</p>
+<p>Now we have a default Vue project, yay! Next up, let&rsquo;s install TailwindCSS. To install we will install three components via <code>npm install tailwindcss postcss autoprefixer</code>. However, at the time of writing TailwindCSS is not using PostCSS 8 yet, however there is a small extended <code>npm i</code> we can run to enable this by using a specific channel:</p>
+<p><code>npm install tailwindcss@npm:@tailwindcss/postcss7-compat postcss@\^7 autoprefixer@\^9</code></p>
+<p>To configure PostCSS and TailwindCSS we must configure both, add the following files to the root of your project.</p>
+<p><code>postcss.config.js</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">plugins</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">tailwindcss</span><span class="o">:</span> <span class="p">{},</span>
+    <span class="nx">autoprefixer</span><span class="o">:</span> <span class="p">{},</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+</code></pre></div><p><code>tailwind.config.js</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">purge</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;./src/**/*.html&#39;</span><span class="p">,</span> <span class="s1">&#39;./src/**/*.html&#39;</span><span class="p">],</span>
+  <span class="nx">darkMode</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="c1">// or &#39;media&#39; or &#39;class&#39;
+</span><span class="c1"></span>  <span class="nx">theme</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">extend</span><span class="o">:</span> <span class="p">{},</span>
+  <span class="p">},</span>
+  <span class="nx">variants</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">extend</span><span class="o">:</span> <span class="p">{},</span>
+  <span class="p">},</span>
+  <span class="nx">plugins</span><span class="o">:</span> <span class="p">[],</span>
+<span class="p">};</span>
+</code></pre></div><p>An important and useful line in the tailwind configuraton is that we would like to purge many of the classes of Tailwind. If we only use one class, we only want to bundle the css classes that are actually used in our application to reduce the final bundle size.</p>
+<p>Then in your App.vue class, add the following in the <code>&lt;style&gt;</code> section to allow usage of tailwind in the Vue application:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;template&gt;
+...
+&lt;/template&gt;
+
+&lt;style&gt;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+...
+&lt;/style&gt;
+</code></pre></div></div>
+  
+</article></main>
+<footer class="footer">
+  <span>&copy; 2021 <a href="https://beentjes.me/">Martin Beentjes</a></span>
+  <span>&middot;</span>
+  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
+  <span>&middot;</span>
+  <span>Theme️ <a href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank">Paper</a></span>
+</footer>
+<script src="https://beentjes.me/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>
+
