@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <title>404 Page not found - Martin Beentjes</title>
+    <title>How I broke a lot of CI/CD pipelines - Martin Beentjes</title>
     
-    <meta name="description" content="">
+    <meta name="description" content="In the time I was working at Albert Heijn in the GitHub team, I created many GitHub Actions. One I built in my spare time was the martinbeentjes/npm-get-version-action which reads the package.json file to retrieve the version of a package. We needed this for our migration. In last years I barely touched the repository, sometimes I did a small change. This week, I changed two things which made a lot of pipelines break.">
     <meta name="author" content="">
     
     <link href="https://beentjes.me/an-old-hope.min.css" rel="stylesheet">
@@ -67,7 +67,7 @@
       }
     </script>
   </head>
-  <body class="list">
+  <body class="single">
     <script>
       setTheme();
     </script>
@@ -89,7 +89,24 @@
     </header>
     <main class="main">
 
-<div class="not-found">404</div></main>
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">How I broke a lot of CI/CD pipelines</h1>
+    <div class="post-meta">April 20, 2022</div>
+  </header>
+  <div class="post-content"><p>In the time I was working at Albert Heijn in the GitHub team, I created many GitHub Actions. One I built in my spare time was the <code>martinbeentjes/npm-get-version-action</code> which reads the <code>package.json</code> file to retrieve the version of a package. We needed this for our migration. In last years I barely touched the repository, sometimes I did a small change. This week, I changed two things which made a lot of pipelines break.</p>
+<h2 id="what-happened">What happened?</h2>
+<p>I merged a Pull Request that used <code>jq</code> to get the version field instead of using a combination of <code>grep</code> and <code>awk</code>. I did not test it properly, it broke. The base Docker image user does not have jq installed. So, that was the first issue.</p>
+<p>Secondly, the default branch was changed from <code>master</code> to <code>main</code> and I immediately removed the <code>master</code> branch. In the README.md the example states to use the git tag <code>master</code> for the version. So, what happens when you remove <code>master</code>? Yes, pipelines break!</p>
+<h2 id="what-did-i-learn">What did I learn?</h2>
+<p>This was a great lesson to understand the impact of a simple action makes. The repository is mentioned in over 5k repositories. That means that over 5k repositories will need a mandatory coffee break because of this change. I learned to think through how to setup a README.md, using <code>master</code> as a tag in the example is not the best option. It automatically pulls new changes. Instead, when releasing a version I should change the tag in the README.md as well.</p>
+<p>I am grateful for the kind messages of the people thanking me for maintaining this Action, that was a nice feeling. Open Source Software is a cool thing to be active in and I hope to have more open source projects in the future.</p>
+<h2 id="where-can-you-find-me">Where can you find me</h2>
+<p>Feel free to follow me on <a href="https://twitter.com/martinbeentjes">Twitter</a> and <a href="https://github.com/martinbeentjes">GitHub</a></p>
+</div>
+  
+</article></main>
 <footer class="footer">
   <span>&copy; 2022 <a href="https://beentjes.me/">Martin Beentjes</a></span>
   <span>&middot;</span>

@@ -6,7 +6,16 @@
     <description>Recent content on Martin Beentjes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Jan 2021 14:07:39 +0100</lastBuildDate><atom:link href="https://beentjes.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Apr 2022 16:00:00 +0100</lastBuildDate><atom:link href="https://beentjes.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I broke a lot of CI/CD pipelines</title>
+      <link>https://beentjes.me/post/i-broke-many-pipelines/</link>
+      <pubDate>Wed, 20 Apr 2022 16:00:00 +0100</pubDate>
+      
+      <guid>https://beentjes.me/post/i-broke-many-pipelines/</guid>
+      <description>In the time I was working at Albert Heijn in the GitHub team, I created many GitHub Actions. One I built in my spare time was the martinbeentjes/npm-get-version-action which reads the package.json file to retrieve the version of a package. We needed this for our migration. In last years I barely touched the repository, sometimes I did a small change. This week, I changed two things which made a lot of pipelines break.</description>
+    </item>
+    
     <item>
       <title>Setup Vue With Tailwind</title>
       <link>https://beentjes.me/post/setup-vue-with-tailwind/</link>
